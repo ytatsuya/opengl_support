@@ -1,0 +1,5 @@
+<launch>
+ <node pkg="for_test" type="odom_republish" name="odom_republish"/>
+ <node pkg="tf" type="static_transform_publisher" name="test" args="0 0 0 0 0 0 /base_link camera_link 100"/>
+ <node pkg="tf" type="static_transform_publisher" name="mapToodom" args="0 0 0 3.14 0 3.14 /map /odom 100"/>
+</launch>

@@ -1,0 +1,6 @@
+<launch>
+<arg name="name" default="rosbag"/>
+    <node pkg="rosbag" type="record" name="rosbag_record" output="screen" 
+     args="-o /media/mouse/34aa7fa2-4db1-4cf5-a551-06d2b3a728ab/rosbag/$(arg name) /camera/rgb/image_rect_color /map /odom_marker /odom_registered /tf /tf_static /camera/depth_registered/points /joy /cv_bridge_omnidirectional_cam/image" />
+
+</launch>
